@@ -1,0 +1,39 @@
+/* Reset */
+
+.posts-header__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.posts-header__name,
+.posts-header__stats {
+    margin: 0;
+}
+
+
+/* Stylization */
+
+.posts-header__name {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.posts-header__stats {
+    font-size: 18px;
+    color: #847777;
+}
+
+
+/* Grid */
+
+.posts__header {
+    padding: 40px 0;
+}
+
+.posts-header__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
