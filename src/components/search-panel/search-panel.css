@@ -33,6 +33,7 @@
 /* Grids */
 
 .search-panel__input {
-    width: 100%;
+    flex-grow: 1;
+    margin-right: 20px;
     padding: 10px 0 10px 15px;
 }
