@@ -7,13 +7,19 @@ const PostList = () => {
             {/* <i className="fa fa-heart"></i> */}
             <ul className="posts-list__actions actions-list">
                 <li className="actions-list__item actions-list__item_star">
-                    <i className="fa fa-star"></i>
+                    <button type="button" className="actions-list__btn">
+                        <i className="fa fa-star"></i>
+                    </button>
                 </li>
                 <li className="actions-list__item actions-list__item_trash">
-                    <i className="fa fa-trash"></i>
+                    <button type="button" className="actions-list__btn">
+                        <i className="fa fa-trash"></i>
+                    </button>
                 </li>
                 <li className="actions-list__item actions-list__item_heart">
-                    <i className="fa fa-heart"></i>
+                    <button type="button" className="actions-list__btn">
+                        <i className="fa fa-heart"></i>
+                    </button>
                 </li>
             </ul>
         </li>
