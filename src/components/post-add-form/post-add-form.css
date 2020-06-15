@@ -1,25 +1,11 @@
 /* Reset */
 
-.posts-form__input {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-}
-
 .posts-form__input:focus {
     outline: none;
 }
 
 
 /* Stylization */
-
-.posts-form__input {
-    border: 1px solid #ccc5c5;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-}
 
 .posts-form__btn {
     min-width: 100px;

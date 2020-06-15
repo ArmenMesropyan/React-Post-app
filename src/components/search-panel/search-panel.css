@@ -9,22 +9,23 @@
 
 /* Stylization */
 
-.search-panel__input {
+.default-input {
     color: #5d5252;
     border: 1px solid rgb(204, 197, 197);
     border-radius: 5px;
+    padding: 10px 0 10px 15px;
 }
 
-.search-panel__input::placeholder {
+.default-input::placeholder {
     color: rgb(167, 161, 161);
 }
 
-.search-panel__input:hover {
+.default-input:hover {
     border-color: rgb(107, 105, 105);
 }
 
-.search-panel__input:focus,
-.search-panel__input:active {
+.default-input:focus,
+.default-input:active {
     outline: none;
     border-color: #1a1919;
 }
@@ -39,5 +40,4 @@
 .search-panel__input {
     flex-grow: 1;
     margin-right: 20px;
-    padding: 10px 0 10px 15px;
 }
