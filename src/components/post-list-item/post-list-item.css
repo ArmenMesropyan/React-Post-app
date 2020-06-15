@@ -1,0 +1,60 @@
+/* Reset */
+
+.posts-list__heading,
+.actions-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* Stylization */
+
+.posts-list__item {
+    border: 1px solid #ccc5c5;
+    border-radius: 5px;
+    padding: 20px 30px;
+}
+
+.posts-list__heading {
+    font-size: 18px;
+    color: #565050;
+}
+
+.posts-list__item .fa-star path {
+    fill: #ffeb3b;
+    cursor: pointer;
+}
+
+.posts-list__item .fa-trash path {
+    fill: #e44949;
+    cursor: pointer;
+}
+
+.posts-list__item .fa-heart path {
+    fill: #e00a0a;
+    cursor: pointer;
+}
+
+
+/* Grids */
+
+.actions-list,
+.posts-list__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts-list__item {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions-list__item {
+    margin-right: 15px;
+}
+
+.actions-list__item:last-child {
+    margin-right: 0;
+}
