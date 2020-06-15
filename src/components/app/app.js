@@ -3,6 +3,7 @@ import './app.css';
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import PostStatusFilter from '../post-status-filter';
+import PostList from '../post-list';
 
 const App = () => (
     <main className="posts">
@@ -14,6 +15,7 @@ const App = () => (
                 <PostStatusFilter />
             </div>
         </section>
+        <PostList />
     </main>
 );
 
