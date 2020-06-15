@@ -10,14 +10,17 @@
 /* Stylization */
 
 .posts-sorting__all,
-.posts-sorting__liked {
+.default-btn {
     color: #585252;
     cursor: pointer;
     background-color: inherit;
     border: 1px solid rgb(68, 67, 67);
     padding: 10px 20px;
-    border-radius: 0 10px 10px 0;
     transition: 0.5s;
+}
+
+.default-btn {
+    border-radius: 5px;
 }
 
 .posts-sorting__all {
@@ -25,6 +28,7 @@
 }
 
 .posts-sorting__liked {
+    border-radius: 0 10px 10px 0;
     border-left: none;
 }
 
@@ -37,9 +41,9 @@
 }
 
 .posts-sorting__all:hover,
-.posts-sorting__liked:hover,
+.default-btn:hover,
 .posts-sorting__all:focus,
-.posts-sorting__liked:focus {
+.default-btn:focus {
     outline: none;
     color: #fff;
     background-color: #35c0f5;

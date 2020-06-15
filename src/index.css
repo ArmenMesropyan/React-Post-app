@@ -20,6 +20,8 @@ body {
     line-height: 21px;
     color: #000;
     overflow-x: hidden;
+    min-height: 100vh;
+    background-color: #ebf9ff;
 }
 
 a {

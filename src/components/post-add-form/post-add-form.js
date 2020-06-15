@@ -12,7 +12,7 @@ const PostAddForm = () => {
                     />
                     <button
                         type="submit"
-                        className="posts-form__btn"
+                        className="posts-form__btn default-btn"
                     >Add</button>
                 </form>
             </div>
