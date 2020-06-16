@@ -13,6 +13,10 @@
     padding: 0;
 }
 
+.actions-list__btn:focus {
+    outline: none;
+}
+
 
 /* Stylization */
 
@@ -28,19 +32,28 @@
     color: #565050;
 }
 
+.posts-list__item_important .posts-list__heading {
+    color: #e8d91a;
+}
+
+.actions-list__btn {
+    cursor: pointer;
+}
+
 .posts-list__item .fa-star path {
     fill: #ffeb3b;
-    cursor: pointer;
+}
+
+.posts-list__item_important .fa-star path {
+    fill: #9c9595;
 }
 
 .posts-list__item .fa-trash path {
     fill: #e44949;
-    cursor: pointer;
 }
 
 .posts-list__item .fa-heart path {
     fill: #e00a0a;
-    cursor: pointer;
 }
 
 
