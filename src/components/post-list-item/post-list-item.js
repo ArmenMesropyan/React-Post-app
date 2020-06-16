@@ -1,9 +1,10 @@
 import React from 'react';
 
-const PostList = () => {
+const PostList = ({label, important}) => {
+    const classNames = `posts-list__item ${important ? 'posts-list__item_important': ''}`;
     return (
-        <li className="posts-list__item">
-            <h3 className="posts-list__heading">Hello World!</h3>
+        <li className={classNames}>
+            <h3 className="posts-list__heading">{label}</h3>
             <ul className="posts-list__actions actions-list">
                 <li className="actions-list__item actions-list__item_star">
                     <button type="button" className="actions-list__btn">

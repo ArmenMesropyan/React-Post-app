@@ -26,7 +26,7 @@ const App = () => {
                     <PostStatusFilter />
                 </div>
             </section>
-            <PostList />
+            <PostList posts={posts}/>
             <PostAddForm />
         </main>
     )
