@@ -41,11 +41,11 @@
 }
 
 .posts-list__item .fa-star path {
-    fill: #ffeb3b;
+    fill: #9c9595;
 }
 
 .posts-list__item_important .fa-star path {
-    fill: #9c9595;
+    fill: #ffeb3b;
 }
 
 .posts-list__item .fa-trash path {
