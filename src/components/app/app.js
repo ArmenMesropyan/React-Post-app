@@ -10,7 +10,7 @@ import PostAddForm from '../post-add-form';
 
 const App = () => {
     const posts = [
-        {label: 'I want to learn React!', important: true, id: 'qsdw12kl01123kasd'},
+        {label: 'I want to learn React!', important: true, liked: true, id: 'qsdw12kl01123kasd'},
         {label: 'Hi everyone!', important: false, id: 'kla12ds92jnzio'},
         {label: 'I will create new application!', important: false, id: 'lmzx014nxz0p'},
         {label: 'Whats wrong with world?!', important: false, id: 'polaz123zx0l'},
