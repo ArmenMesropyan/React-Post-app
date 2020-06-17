@@ -23,8 +23,16 @@ export default class App extends Component {
         }))
     }
 
-    changeState = (action) => {
-        console.log('click', action)
+    onActionsClick = (action, id) => {
+        this.setState(({posts}) => {
+            const post = posts[posts.findIndex(post => post.id === id)];
+            if(action === 'like') post.liked = !post.liked;
+            else post.important = !post.important;
+
+            return [
+                ...posts,
+            ]
+        });
     }
 
     addPost = (e) => {
@@ -51,7 +59,7 @@ export default class App extends Component {
                         <PostStatusFilter />
                     </div>
                 </section>
-                <PostList posts={posts} onDelete={this.deletePost} onClickEvent={this.changeState}/>
+                <PostList posts={posts} onDelete={this.deletePost} onActionsClick={this.onActionsClick}/>
                 <PostAddForm onAddFormSubmit={this.addPost}/>
             </main>
         );

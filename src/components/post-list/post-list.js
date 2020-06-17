@@ -1,10 +1,10 @@
 import React from "react";
 import PostListItem from '../post-list-item';
 
-const PostList = ({posts, onDelete, onClickEvent}) => {
+const PostList = ({posts, onDelete, onActionsClick}) => {
     const elements = posts.map(({id, ...post}) => {
         return (
-            <PostListItem key={id} onDelete={() => onDelete(id)} onClickEvent={onClickEvent} {...post}/>
+            <PostListItem key={id} onDelete={() => onDelete(id)} onActionsClick={(action) => onActionsClick(action, id)} {...post}/>
         );
     });
     return (
