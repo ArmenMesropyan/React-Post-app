@@ -15,7 +15,7 @@ export default class PostListItem extends Component {
     }
 
     render() {
-        const {label} = this.props;
+        const {label, onDelete} = this.props;
         const {important, liked} = this.state;
 
         const classNames = `posts-list__item ${important ? 'posts-list__item_important': ''} ${liked ? 'posts-list__item_liked': ''}`;
@@ -30,7 +30,7 @@ export default class PostListItem extends Component {
                         </button>
                     </li>
                     <li className="actions-list__item actions-list__item_trash">
-                        <button type="button" className="actions-list__btn">
+                        <button type="button" className="actions-list__btn" onClick={onDelete}>
                             <i className="fa fa-trash"></i>
                         </button>
                     </li>

@@ -13,6 +13,10 @@ const App = () => {
         {label: 'I will create new application!', important: false, id: 'lmzx014nxz0p'},
         {label: 'Whats wrong with world?!', important: false, id: 'polaz123zx0l'},
     ]
+
+    function deletePost(id) {
+        console.log(`delete ${id}`);
+    }
     
     return (
         <main className="posts">
@@ -24,7 +28,7 @@ const App = () => {
                     <PostStatusFilter />
                 </div>
             </section>
-            <PostList posts={posts}/>
+            <PostList posts={posts} onDelete={deletePost}/>
             <PostAddForm />
         </main>
     )
