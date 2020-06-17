@@ -49,18 +49,29 @@ export default class App extends Component {
 
     render() {
         const {posts} = this.state;
+        const allPostsLength = posts.length;
+        const likedPostsLength = posts.filter(post => post.liked).length;
         return (
             <main className="posts">
                 <h1>Post application - a simple react application.</h1>
-                <AppHeader />
+                <AppHeader 
+                    allPostsLength={allPostsLength}
+                    likedPostsLength={likedPostsLength}
+                />
                 <section className="search-panel">
                     <div className="container search-panel__wrapper">
                         <SearchPanel />
                         <PostStatusFilter />
                     </div>
                 </section>
-                <PostList posts={posts} onDelete={this.deletePost} onActionsClick={this.onActionsClick}/>
-                <PostAddForm onAddFormSubmit={this.addPost}/>
+                <PostList
+                    posts={posts}
+                    onDelete={this.deletePost}
+                    onActionsClick={this.onActionsClick}
+                />
+                <PostAddForm
+                    onAddFormSubmit={this.addPost}
+                />
             </main>
         );
     }
