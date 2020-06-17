@@ -23,9 +23,16 @@ export default class App extends Component {
         }))
     }
 
-    addPost(e) {
+    addPost = (e) => {
         e.preventDefault();
-        console.log(e.target);
+        const {value} = e.target.elements[0];
+        if (!value) return;
+
+        const newPost = {label: value, important: false, id: `${Math.random()}`};
+
+        this.setState(({posts}) => ({
+            posts: [...posts, newPost],
+        }));
     }
 
     render() {
