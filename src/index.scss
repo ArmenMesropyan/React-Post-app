@@ -1,3 +1,6 @@
+$container-size: 960px;
+$basic-size: 16px;
+$app-background: #ebf9ff;
 *,
 *::before,
 *::after {
@@ -16,12 +19,12 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: $basic-size;
     line-height: 21px;
     color: #000;
     overflow-x: hidden;
     min-height: 100vh;
-    background-color: #ebf9ff;
+    background-color: $app-background;
 }
 
 a {
@@ -45,7 +48,13 @@ img {
 }
 
 .container {
-    max-width: 960px;
+    max-width: $container-size;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+@import './components/app/app.scss';
+@import './components/app-header/app-header.scss';
+@import './components/post-add-form/post-add-form.scss';
+@import './components/post-list/post-list.scss';
+@import './components/post-list-item/post-list-item.scss';

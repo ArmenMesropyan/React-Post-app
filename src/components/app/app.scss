@@ -1,3 +1,7 @@
+h1 {
+    @extend .visually-hidden;
+}
+
 .search-panel__wrapper {
     display: flex;
     flex-wrap: wrap;

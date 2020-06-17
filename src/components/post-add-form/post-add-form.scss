@@ -1,0 +1,19 @@
+.posts-form {
+    &__input {
+        &:focus {
+            outline: none;
+        }
+    }
+    &__btn {
+        max-width: 100px;
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__input {
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+}

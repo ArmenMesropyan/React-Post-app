@@ -9,7 +9,7 @@ const PostList = ({posts}) => {
     });
     return (
         <section className="posts__list posts-list">
-            <h2 className="posts-list__title visually-hidden">Posts List</h2>
+            <h2>Posts List</h2>
             <div className="container">
                 <ul className="posts-list__list">
                     {elements}

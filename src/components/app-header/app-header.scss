@@ -1,0 +1,32 @@
+$stats-color: #847777;
+.posts-header {
+    &__list,
+    &__name,
+    &__stats {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__name {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    &__stats {
+        font-size: 18px;
+        color: $stats-color;
+    }
+}
+
+.posts__header {
+    padding: 40px 0;
+    & h2 {
+        @extend .visually-hidden;
+    }
+}
+
+.posts-header__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}

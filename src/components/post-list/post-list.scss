@@ -1,4 +1,6 @@
-/* Reset */
+.posts-list h2 {
+    @extend .visually-hidden;
+}
 
 .posts-list__list {
     padding: 0;

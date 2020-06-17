@@ -3,7 +3,7 @@ import React from "react";
 const AppHeader = () => {
     return (
         <header className="posts__header posts-header">
-            <h2 className="visually-hidden">User information</h2>
+            <h2>User information</h2>
             <div className="container">
                 <ul className="posts-header__list">
                     <li className="posts-header__item">
