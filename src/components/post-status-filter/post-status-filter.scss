@@ -1,0 +1,52 @@
+$default-btn-color: #585252;
+$default-btn-background: #35c0f5;
+$default-btn-hover-color: #fff;
+.search-panel__sorting {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.default-btn {
+    color: $default-btn-color;
+    cursor: pointer;
+    background-color: inherit;
+    border: 1px solid rgb(68, 67, 67);
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+        outline: none;
+        color: $default-btn-hover-color;
+        background-color: $default-btn-background;
+        transition: 0.5s;
+    }
+}
+
+.posts-sorting {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &__all {
+        @extend .default-btn;
+        border-right: none;
+    }
+    &__liked {
+        @extend .default-btn;
+        border-radius: 0 10px 10px 0;
+        border-left: none;
+    }
+    &__checked {
+        color: #fff;
+        background-color: $default-btn-background;
+        padding: 10px 20px;
+        border: 1px solid rgb(111, 105, 105);
+        border-radius: 10px 0px 0 10px;
+        &:hover {
+            color: $default-btn-color;
+            background-color: inherit;
+            transition: 0.5s;
+        }
+    }
+}

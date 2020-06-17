@@ -7,7 +7,7 @@ const SearchPanel = () => {
                 <button className="posts-sorting__all posts-sorting__checked">All</button>
             </li>
             <li className="posts-sorting__item">
-                <button className="posts-sorting__liked default-btn">Liked</button>
+                <button className="posts-sorting__liked">Liked</button>
             </li>
         </ul>
     )

@@ -8,11 +8,11 @@ const PostAddForm = () => {
                     <input 
                         type="text"
                         placeholder="What are you thinking now?"
-                        className="posts-form__input default-input"
+                        className="posts-form__input"
                     />
                     <button
                         type="submit"
-                        className="posts-form__btn default-btn"
+                        className="posts-form__btn"
                     >Add</button>
                 </form>
             </div>

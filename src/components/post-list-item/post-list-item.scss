@@ -1,3 +1,9 @@
+$post-background: #fff;
+$title-color: #565050;
+$unstar-color: #9c9595;
+$star-color: #e8d91a;
+$trash-color:#e44949;
+$heart-color: #e00a0a;
 .posts-list {
     &__item {
         display: flex;
@@ -8,22 +14,22 @@
         border: 1px solid #ccc5c5;
         border-radius: 5px;
         padding: 20px 30px;
-        background-color: #fff;
+        background-color: $post-background;
         & .fa-star path {
-            fill: #9c9595;
+            fill: $unstar-color;
         }
         & .fa-trash path {
-            fill: #e44949;
+            fill: $trash-color;
         }
         & .fa-heart path {
-            fill: #e00a0a;
+            fill: $heart-color;
         }
         &_important {
             & .posts-list__heading {
-                color: #e8d91a;
+                color: $star-color;
             }
             & .fa-star path {
-                fill: #efdf19;
+                fill: $star-color;
             }
         }
         &_liked .actions-list__item_heart {
@@ -38,7 +44,7 @@
         flex-grow: 1;
         list-style: none;
         font-size: 18px;
-        color: #565050;
+        color: $title-color;
         cursor: pointer;
     }
 }

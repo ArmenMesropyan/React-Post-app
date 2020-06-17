@@ -1,11 +1,33 @@
+
+.default-input {
+    color: #5d5252;
+    border: 1px solid rgb(204, 197, 197);
+    border-radius: 5px;
+    padding: 10px 0 10px 15px;
+
+    &::placeholder {
+        color: rgb(167, 161, 161);
+    }
+    &:hover {
+        border-color: rgb(107, 105, 105);
+    }
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: #1a1919;
+    }
+}
+
 .posts-form {
     &__input {
+        @extend .default-input;
         &:focus {
             outline: none;
         }
     }
     &__btn {
         max-width: 100px;
+        @extend .default-btn;
     }
     &__form {
         display: flex;
