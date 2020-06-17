@@ -1,31 +1,18 @@
 import React, { Component } from 'react';
 
 export default class PostListItem extends Component {
-    state = {
-        important: this.props.important || false,
-        liked: this.props.liked || false,
-    }
-
-    onImportantBtnClick = () => {
-        this.setState(({important}) => ({important: !important}));
-    }
-
-    onLikeBtnClick = () => {
-        this.setState(({liked}) => ({liked: !liked}));
-    }
-
     render() {
-        const {label, onDelete} = this.props;
-        const {important, liked} = this.state;
+        const {label, onClickEvent, onDelete} = this.props;
+        // const {important, liked} = this.state;
 
-        const classNames = `posts-list__item ${important ? 'posts-list__item_important': ''} ${liked ? 'posts-list__item_liked': ''}`;
+        // const classNames = `posts-list__item ${important ? 'posts-list__item_important': ''} ${liked ? 'posts-list__item_liked': ''}`;
 
         return (
-            <li className={classNames}>
-                <h3 className="posts-list__heading" onClick={this.onLikeBtnClick}>{label}</h3>
+            <li className='posts-list__item'>
+                <h3 className="posts-list__heading" onClick={() => onClickEvent('like')}>{label}</h3>
                 <ul className="posts-list__actions actions-list">
                     <li className="actions-list__item actions-list__item_star">
-                        <button type="button" className="actions-list__btn" onClick={this.onImportantBtnClick}>
+                        <button type="button" className="actions-list__btn" onClick={() => onClickEvent('important')}>
                             <i className="fa fa-star"></i>
                         </button>
                     </li>
@@ -35,7 +22,7 @@ export default class PostListItem extends Component {
                         </button>
                     </li>
                     <li className="actions-list__item actions-list__item_heart">
-                        <button type="button" className="actions-list__btn" onClick={this.onLikeBtnClick}>
+                        <button type="button" className="actions-list__btn" onClick={() => onClickEvent('like')}>
                             <i className="fa fa-heart"></i>
                         </button>
                     </li>

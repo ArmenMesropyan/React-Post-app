@@ -23,6 +23,10 @@ export default class App extends Component {
         }))
     }
 
+    changeState = (action) => {
+        console.log('click', action)
+    }
+
     addPost = (e) => {
         e.preventDefault();
         const {value} = e.target.elements[0];
@@ -47,7 +51,7 @@ export default class App extends Component {
                         <PostStatusFilter />
                     </div>
                 </section>
-                <PostList posts={posts} onDelete={this.deletePost}/>
+                <PostList posts={posts} onDelete={this.deletePost} onClickEvent={this.changeState}/>
                 <PostAddForm onAddFormSubmit={this.addPost}/>
             </main>
         );
