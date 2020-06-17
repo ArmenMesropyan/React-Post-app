@@ -23,6 +23,11 @@ export default class App extends Component {
         }))
     }
 
+    addPost(e) {
+        e.preventDefault();
+        console.log(e.target);
+    }
+
     render() {
         const {posts} = this.state;
         return (
@@ -36,7 +41,7 @@ export default class App extends Component {
                     </div>
                 </section>
                 <PostList posts={posts} onDelete={this.deletePost}/>
-                <PostAddForm />
+                <PostAddForm onAddFormSubmit={this.addPost}/>
             </main>
         );
     }

@@ -1,10 +1,10 @@
 import React from "react";
 
-const PostAddForm = () => {
+const PostAddForm = (props) => {
     return (
         <section className="posts__form posts-form">
             <div className="container">
-                <form className="posts-form__form">
+                <form className="posts-form__form" onSubmit={props.onAddFormSubmit}>
                     <input 
                         type="text"
                         placeholder="What are you thinking now?"
