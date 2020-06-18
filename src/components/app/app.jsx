@@ -16,6 +16,7 @@ export default class App extends Component {
             {label: 'Whats wrong with world?!', important: false, id: 'polaz123zx0l'},
         ],
         term: '',
+        filter: 'all',
     }
 
     deletePost = (id) => {
@@ -60,11 +61,23 @@ export default class App extends Component {
         return data.filter(item => item.label.indexOf(term) > -1);
     }
 
+    filterPost(data, filter) {
+    console.log('filter: ', filter);
+    console.log('data: ', data);
+        if(filter === 'all') return data;
+
+        return data.filter(item => item[filter]);
+    }
+
+    onFilterClick = (filter) => {
+        this.setState({filter});
+    }
+
     render() {
-        const {posts, term} = this.state;
+        const {posts, term, filter} = this.state;
         const allPostsLength = posts.length;
         const likedPostsLength = posts.filter(post => post.liked).length;
-        const searchPosts = this.searchPost(posts, term);
+        const searchPosts = this.filterPost(this.searchPost(posts, term), filter);
         return (
             <main className="posts">
                 <h1>Post application - a simple react application.</h1>
@@ -75,7 +88,10 @@ export default class App extends Component {
                 <section className="search-panel">
                     <div className="container search-panel__wrapper">
                         <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
-                        <PostStatusFilter />
+                        <PostStatusFilter 
+                            filter={filter}
+                            onFilterClick={this.onFilterClick}
+                        />
                     </div>
                 </section>
                 <PostList

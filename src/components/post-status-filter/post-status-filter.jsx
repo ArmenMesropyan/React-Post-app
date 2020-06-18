@@ -1,16 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 
-const SearchPanel = () => {
-    return (
-        <ul className="search-panel__sorting posts-sorting">
-            <li className="posts-sorting__item">
-                <button className="posts-sorting__all posts-sorting__checked">All</button>
-            </li>
-            <li className="posts-sorting__item">
-                <button className="posts-sorting__liked">Liked</button>
-            </li>
-        </ul>
-    )
+export default class SearchPanel extends Component {
+    buttons = [
+        {name: 'all', label: 'All'},
+        {name: 'liked', label: 'Liked'},
+    ]
+    render() {
+        const buttons = this.buttons.map(({name, label}) => {
+            const {filter, onFilterClick} = this.props;
+            const className = `posts-sorting__${name} ${filter === name ? 'posts-sorting__checked' : ''}`;
+            return (
+                <li className="posts-sorting__item" key={name}>
+                    <button className={className} onClick={() => onFilterClick(name)}>{label}</button>
+                </li>
+            );
+        })
+        return (
+            <ul className="search-panel__sorting posts-sorting">
+                {buttons}
+            </ul>
+        )
+    }
 };
-
-export default SearchPanel;
