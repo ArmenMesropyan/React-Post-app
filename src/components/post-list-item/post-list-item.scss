@@ -17,6 +17,7 @@ $heart-color: #e00a0a;
         background-color: $post-background;
         & .fa-star path {
             fill: $unstar-color;
+            transition: 0.5s;
         }
         & .fa-trash path {
             fill: $trash-color;
@@ -27,9 +28,11 @@ $heart-color: #e00a0a;
         &_important {
             & .posts-list__heading {
                 color: $star-color;
+                transition: 0.5s;
             }
             & .fa-star path {
                 fill: $star-color;
+                transition: 0.5s;
             }
         }
         &_liked .actions-list__item_heart {
@@ -45,6 +48,7 @@ $heart-color: #e00a0a;
         list-style: none;
         font-size: 18px;
         color: $title-color;
+        transition: 0.5s;
         cursor: pointer;
     }
 }

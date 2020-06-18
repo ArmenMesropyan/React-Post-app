@@ -37,7 +37,8 @@ export default class App extends Component {
 
     addPost = (e) => {
         e.preventDefault();
-        const {value} = e.target.elements[0];
+        const form = e.target;
+        const {value} = form.elements[0];
         if (!value) return;
 
         const newPost = {label: value, important: false, id: `${Math.random()}`};
@@ -45,6 +46,8 @@ export default class App extends Component {
         this.setState(({posts}) => ({
             posts: [...posts, newPost],
         }));
+
+        form.reset();
     }
 
     render() {

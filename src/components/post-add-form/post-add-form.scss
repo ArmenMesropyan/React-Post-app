@@ -1,10 +1,8 @@
-
 .default-input {
     color: #5d5252;
     border: 1px solid rgb(204, 197, 197);
     border-radius: 5px;
     padding: 10px 0 10px 15px;
-
     &::placeholder {
         color: rgb(167, 161, 161);
     }
@@ -19,6 +17,7 @@
 }
 
 .posts-form {
+    padding: 20px 0;
     &__input {
         @extend .default-input;
         &:focus {
