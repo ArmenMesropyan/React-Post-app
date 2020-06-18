@@ -14,7 +14,8 @@ export default class App extends Component {
             {label: 'Hi everyone!', important: false, id: 'kla12ds92jnzio'},
             {label: 'I will create new application!', important: false, id: 'lmzx014nxz0p'},
             {label: 'Whats wrong with world?!', important: false, id: 'polaz123zx0l'},
-        ]
+        ],
+        term: '',
     }
 
     deletePost = (id) => {
@@ -50,10 +51,20 @@ export default class App extends Component {
         form.reset();
     }
 
+    onUpdateSearch = (term) => {
+        this.setState({term});
+    }
+
+    searchPost(data, term) {
+        if (!term) return data;
+        return data.filter(item => item.label.indexOf(term) > -1);
+    }
+
     render() {
-        const {posts} = this.state;
+        const {posts, term} = this.state;
         const allPostsLength = posts.length;
         const likedPostsLength = posts.filter(post => post.liked).length;
+        const searchPosts = this.searchPost(posts, term);
         return (
             <main className="posts">
                 <h1>Post application - a simple react application.</h1>
@@ -63,12 +74,12 @@ export default class App extends Component {
                 />
                 <section className="search-panel">
                     <div className="container search-panel__wrapper">
-                        <SearchPanel />
+                        <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
                         <PostStatusFilter />
                     </div>
                 </section>
                 <PostList
-                    posts={posts}
+                    posts={searchPosts}
                     onDelete={this.deletePost}
                     onActionsClick={this.onActionsClick}
                 />
