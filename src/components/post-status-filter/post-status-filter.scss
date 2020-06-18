@@ -28,9 +28,14 @@ $default-btn-hover-color: #fff;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    &__btn:hover {
+        color: $default-btn-hover-color;
+        background-color: $default-btn-color;
+    }
     &__all {
         @extend .default-btn;
         border-right: none;
+        border-radius: 10px 0px 0 10px;
     }
     &__liked {
         @extend .default-btn;
@@ -42,7 +47,6 @@ $default-btn-hover-color: #fff;
         background-color: $default-btn-background;
         padding: 10px 20px;
         border: 1px solid rgb(111, 105, 105);
-        border-radius: 10px 0px 0 10px;
         &:hover {
             color: $default-btn-color;
             background-color: inherit;

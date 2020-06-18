@@ -8,7 +8,7 @@ export default class SearchPanel extends Component {
     render() {
         const buttons = this.buttons.map(({name, label}) => {
             const {filter, onFilterClick} = this.props;
-            const className = `posts-sorting__${name} ${filter === name ? 'posts-sorting__checked' : ''}`;
+            const className = `posts-sorting__btn posts-sorting__${name} ${filter === name ? 'posts-sorting__checked' : ''}`;
             return (
                 <li className="posts-sorting__item" key={name}>
                     <button className={className} onClick={() => onFilterClick(name)}>{label}</button>
